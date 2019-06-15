@@ -40,7 +40,7 @@ public class IndexController {
      * @param request
      * @return
      */
-    @RequestMapping("/toIndex.do")
+        @RequestMapping("/toIndex.do")
     public String toIndex(Model model, HttpServletRequest request){
         System.out.println(request.getRemoteAddr());
         //记录访问信息

@@ -20,4 +20,28 @@ public class MyConstant {
     public static final int OPERATION_REPLY = 2;
     public static final int OPERATION_COMMENT = 3;
 
+
+
+
+
+
+
+//    //七牛云相关
+//    public static final String QINIU_IMAGE_URL = "";
+//    public static final String QINIU_ACCESS_KEY = "";
+//     public static final String QINIU_SECRET_KEY = "";
+//     public static final String QINIU_BUCKET_NAME = "";
+//
+//    //发送邮件的邮箱，要与df.properties中的一致
+//     public static final String MAIL_FROM = "";
+//
+//    //域名
+//
+//    public static final String DOMAIN_NAME = "";
+//
+//    //三种操作
+//    public static final int OPERATION_CLICK_LIKE = 1;
+//    public static final int OPERATION_REPLY = 2;
+//    public static final int OPERATION_COMMENT = 3;
+
 }

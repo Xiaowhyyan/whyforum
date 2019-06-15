@@ -58,15 +58,46 @@ public class UserService {
         return userMapper.selectEditInfo(uid);
     }
 
-    public void updateUser(User user) {
+    public String updateUser(User user) {
+
+        String username = user.getUsername();
+        String description = user.getDescription();
+        String position = user.getPosition();
+        String school = user.getSchool();
+        String job = user.getJob();
+
+        if(username.length()>20 ||username.length()<1){
+            return "用户名为1~20个字符~";
+        }
+
+        if(description.length()>30 ){
+            return "签名为30个字符~";
+        }
+
+        if(position.length()>20){
+           return "位置为20个字符~";
+        }
+
+        if (school.length()>20){
+           return "学校为20个字符~";
+        }
+
+        if (job.length()>20){
+            return "工作为20个字符~";
+        }
+
         userMapper.updateUser(user);
+
+        return "ok";
     }
 
     public void record(StringBuffer requestURL, String contextPath, String remoteAddr) {
+        System.out.println("======================");
         Info info = new Info();
         info.setRequestUrl(requestURL.toString());
         info.setContextPath(contextPath);
         info.setRemoteAddr(remoteAddr);
+        System.out.println(info.toString());
         userMapper.insertInfo(info);
     }
 

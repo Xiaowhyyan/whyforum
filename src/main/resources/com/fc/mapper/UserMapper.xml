@@ -47,7 +47,7 @@
     </update>
 
     <insert id="insertInfo">
-        insert into info values(null,#{requestUrl},#{contextPath},#{remoteAddr},null)
+        insert into info values(null,#{requestUrl},#{contextPath},#{remoteAddr},date_format(now(),'%Y-%c-%d %H:%i:%s'))
     </insert>
 
     <select id="listUserByTime" resultType="com.fc.model.User">

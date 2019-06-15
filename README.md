@@ -1,3 +1,9 @@
+本项目在 https://github.com/fanchaoo/forum.git 项目基础上做了简单修改，修改了部分bug
+感谢原作者
+
+
+
+
 ###### df
 ###### 一个简单的论坛系统
 1. 该项目开发IDE为IntelliJ IDEA，通过Maven构建，后台采用Spring、SpringMVC、MyBatis，数据库采用MySQL、Redis，前台用到jQuery，图片被上传到七牛云。

@@ -96,10 +96,16 @@ public class UserController {
      * @return
      */
     @RequestMapping("/editProfile.do")
-    public String editProfile(User user){
+    public String editProfile(User user,Model model){
         System.out.println(user);
-        userService.updateUser(user);
-        return "redirect:toMyProfile.do";
+        String re = userService.updateUser(user);
+        if (re.equals("ok")){
+            return "redirect:toMyProfile.do";
+        }else {
+            model.addAttribute("userError",re);
+            return "editProfile";
+        }
+
     }
 
 

@@ -18,6 +18,7 @@
 		<div class="edit-header"><span></span>&nbsp;编辑信息</div>
 		<form action="editProfile.do" method="post">
 			<div class="edit-title">
+				<div class="text-danger">${userError}</div>
                 <input type="hidden" name="uid" value="${user.uid}">
 				用户名：<input type="text" name="username" value="${user.username}">
 			</div>
@@ -25,7 +26,7 @@
 				签&nbsp;&nbsp;&nbsp;名：<input type="text" name="description" value="${user.description}">
 			</div>
 			<div class="edit-title">
-				位&nbsp;&nbsp;&nbsp;置：<input type="text" name="position" value="${user.description}">
+				位&nbsp;&nbsp;&nbsp;置：<input type="text" name="position" value="${user.position}">
 			</div>
 			<div class="edit-title">
 				学&nbsp;&nbsp;&nbsp;校：<input type="text" name="school" value="${user.school}">
@@ -34,7 +35,7 @@
 				工&nbsp;&nbsp;&nbsp;作：<input type="text" name="job" value="${user.job}">
 			</div>
 			<div class="relative">
-				<button class="edit-submit">确认编辑</button>
+				<button class="edit-submit" >确认编辑</button>
 			</div>
 		</form>
 
@@ -52,7 +53,7 @@
 				确&nbsp;&nbsp;&nbsp;认：<input type="password" name="repassword">
 			</div>
 			<div class="relative">
-				<button class="edit-submit">确认修改</button>
+				<button class="edit-submit" onclick="modify()">确认修改</button>
 			</div>
 		</form>
 
@@ -73,7 +74,33 @@
 
 <%@ include file="footer.jsp" %>
 <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+    // window.onload=function () {
+    //     var a = document.getElementsByClassName("edit-submit");
+    //     a.onclick=function () {
+    //         console.log("密码修改")
+    //         setTimeout(function (){
+    //             var content=document.getElementsByClassName("text-danger")[0].innerHTML;
+    //             if(content == "") {
+    //                 alert("密码修改成功!")
+	// 			}
+    //         }, 1);
+    //     }
+	// }
+    function modify()
+    {
+        console.log("密码修改")
 
+        setTimeout(function (){
+            var divText = document.getElementsByClassName("text-danger")[1]
+			if(divText == undefined){
+                alert("密码修改成功!")
+			}
+		}, 3000);
+    }
+
+
+</script>
 </body>
 </html>
 
