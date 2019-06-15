@@ -1,4 +1,10 @@
-本项目在 https://github.com/fanchaoo/forum.git 项目基础上做了简单修改，修改了部分bug
+本项目在 https://github.com/fanchaoo/forum.git 项目基础上做了简单修改，
+1、修改了部分bug
+2、增加功能测试用例
+用例文本内容  
+https://github.com/Xiaowhyyan/whyforum/blob/master/%E8%AE%BA%E5%9D%9B%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B
+用例xmind内容 
+https://github.com/Xiaowhyyan/whyforum/blob/master/%E8%AE%BA%E5%9D%9B%E7%B3%BB%E7%BB%9F.xmind
 感谢原作者
 
 
